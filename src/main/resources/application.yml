@@ -1,0 +1,22 @@
+minio:
+  endpoint: http://localhost:9000
+  accessKey: minioadmin
+  secretKey: minioadmin
+  file-size: 20971520
+  bucketName: test
+
+spring:
+  data:
+    mongodb:
+      host: localhost        # MongoDB server host
+      port: 27018            # MongoDB server port
+      database: CSM     # Database name
+
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+server:
+  port: 8081
+
+
