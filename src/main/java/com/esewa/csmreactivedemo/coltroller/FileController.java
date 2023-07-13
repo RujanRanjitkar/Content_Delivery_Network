@@ -28,7 +28,7 @@ public class FileController {
         file.transferTo(convFile).subscribe();
         String actualData = Files.readString(convFile.toPath());
 
-        fileContentService.saveFileContent(actualData);
+        fileContentService.saveFileContent(actualData, file.filename());
 
         minioService.uploadFile(file);
         return Mono.just("saved");

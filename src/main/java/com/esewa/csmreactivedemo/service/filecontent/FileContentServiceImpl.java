@@ -14,10 +14,10 @@ public class FileContentServiceImpl implements FileContentService {
 
     private final FileContentRepo fileContentRepo;
     @Override
-    public void saveFileContent(String jsonData) {
+    public void saveFileContent(String jsonData, String fileName) {
         FileContent fileContent = new FileContent();
         fileContent.setActualData(jsonData);
-        fileContent.setFileName("dummy");
+        fileContent.setFileName(fileName);
 
         log.info("saving file content");
         //saving file content using reactive
